@@ -6,8 +6,8 @@ namespace eulerproject
 	{
 		// Properties
 
-		public int Number { get; set; }
-		public string Name { get; set; }
+		public ProblemAttribute Attribute { get; set; }
+		public bool IsSlow { get; set; }
 		public IProblem Problem { get; set; }
 
 

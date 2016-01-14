@@ -3,7 +3,7 @@ using System.Linq;
 
 namespace eulerproject
 {
-	[Problem (8, "Largest product in a series")]
+	[Problem (8, "Largest product in a series", 23514624000)]
 	public class Problem8 : IProblem
 	{
 		private static readonly string bigNumer = 

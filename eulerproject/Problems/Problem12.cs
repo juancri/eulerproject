@@ -4,7 +4,7 @@ using System.Linq;
 
 namespace eulerproject
 {
-	[Problem (12, "Highly divisible triangular number")]
+	[Problem (12, "Highly divisible triangular number", 76576500)]
 	public class Problem12 : IProblem
 	{
 		public long Run ()

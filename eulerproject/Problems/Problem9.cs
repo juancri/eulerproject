@@ -4,7 +4,7 @@ using System.Linq;
 
 namespace eulerproject
 {
-	[Problem (9, "Special Pythagorean triplet")]
+	[Problem (9, "Special Pythagorean triplet", 31875000)]
 	public class Problem9 : IProblem
 	{
 		public long Run ()

@@ -4,7 +4,7 @@ using System.Linq;
 
 namespace eulerproject
 {
-	[Problem (6, "Sum square difference")]
+	[Problem (6, "Sum square difference", 25164150)]
 	public class Problem6 : IProblem
 	{
 		public long Run ()

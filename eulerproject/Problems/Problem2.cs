@@ -4,7 +4,7 @@ using System.Linq;
 
 namespace eulerproject
 {
-	[Problem (2, "Even Fibonacci numbers")]
+	[Problem (2, "Even Fibonacci numbers", 4613732)]
 	public class Problem2 : IProblem
 	{
 		public long Run ()

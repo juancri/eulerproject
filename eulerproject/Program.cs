@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Diagnostics;
 using System.Linq;
 
 namespace eulerproject
@@ -9,12 +10,63 @@ namespace eulerproject
 		{
 			var problems = ProblemReader.GetProblems ().ToList ();
 			foreach (var p in problems)
-				Console.WriteLine ("{0:00000}: {1}", p.Number, p.Name);
-			Console.WriteLine ("Type problem number to execute:");
-			var number = Console.ReadLine ();
-			Console.WriteLine (problems
-				.First (p => p.Number == int.Parse (number))
-				.Problem.Run ());
+				Console.WriteLine ("{0:00000}: {1}", p.Attribute.Number, p.Attribute.Name);
+			Console.WriteLine ("Type problem number to execute or ENTER to run all:");
+			var line = Console.ReadLine ();
+			if (line.Length == 0) {
+				foreach (var p in problems)
+					Run (p);
+			} else {
+				var number = int.Parse (line);
+				var problem = problems
+					.First (p => p.Attribute.Number == number);
+				Run (problem);
+			}			
+		}
+
+		private static void Run (ProblemDefinition p)
+		{
+			Console.BackgroundColor = ConsoleColor.Black;
+			Console.ForegroundColor = ConsoleColor.White;
+			Console.Write (" Problem {0:00000} ", 
+				p.Attribute.Number);
+
+			Console.BackgroundColor = ConsoleColor.Blue;
+			Console.Write (" {0}: ", 
+				p.Attribute.Name);
+
+			if (p.IsSlow)
+			{
+				Console.BackgroundColor = ConsoleColor.DarkGray;
+				Console.ForegroundColor = ConsoleColor.Red;
+				Console.Write (" [SLOW!] ");
+				Console.ForegroundColor = ConsoleColor.White;
+			}
+
+			var sw = new Stopwatch();
+			sw.Start ();
+			var result = p.Problem.Run ();
+			sw.Stop ();
+			if (result == p.Attribute.Result)
+			{
+				Console.BackgroundColor = ConsoleColor.Green;
+				Console.Write (" OK ");
+			}
+			else
+			{
+				Console.BackgroundColor = ConsoleColor.Red;
+				Console.Write (" ERROR ");
+			}
+
+			if (sw.Elapsed > TimeSpan.FromSeconds (1))
+				Console.BackgroundColor = ConsoleColor.DarkRed;
+			else
+				Console.BackgroundColor = ConsoleColor.DarkYellow;
+			Console.Write (" ({0}ms) ", sw.ElapsedMilliseconds);
+
+			Console.ResetColor ();
+			Console.WriteLine (" Expected: {0} Got: {1}",
+				p.Attribute.Result, result);
 		}
 	}
 }

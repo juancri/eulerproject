@@ -14,12 +14,11 @@ namespace eulerproject
 			return
 				from t in Assembly.GetExecutingAssembly ().DefinedTypes
 				where t.ImplementedInterfaces.Any (i => i == typeof(IProblem))
-				let problemAttribute = (ProblemAttribute)t.GetCustomAttribute (typeof(ProblemAttribute))
 				select new ProblemDefinition
 				{
-					Name = problemAttribute.Name,
-					Number = problemAttribute.Number,
-					Problem = (IProblem)t.GetConstructor (new Type [0]).Invoke (new object [0])
+					Attribute = (ProblemAttribute)t.GetCustomAttribute (typeof(ProblemAttribute)),
+					Problem = (IProblem)t.GetConstructor (new Type [0]).Invoke (new object [0]),
+					IsSlow = t.GetCustomAttribute (typeof(SlowAttribute)) != null
 				};
 		}
 	}

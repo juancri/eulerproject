@@ -4,7 +4,7 @@ using System.Linq;
 
 namespace eulerproject
 {
-	[Problem (11, "Largest product in a grid")]
+	[Problem (11, "Largest product in a grid", 70600674)]
 	public class Problem11 : IProblem
 	{
 		private static readonly int[][] grid = new [] {

@@ -3,7 +3,8 @@ using System.Linq;
 
 namespace eulerproject
 {
-	[Problem (7, "10001st prime")]
+	[Slow]
+	[Problem (7, "10001st prime", 104743)]
 	public class Problem7 : IProblem
 	{
 		public long Run ()

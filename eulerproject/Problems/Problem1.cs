@@ -3,7 +3,7 @@ using System.Linq;
 
 namespace eulerproject
 {
-	[Problem (1, "Multiples of 3 and 5")]
+	[Problem (1, "Multiples of 3 and 5", 234168)]
 	public class Problem1 : IProblem
 	{
 		public long Run ()

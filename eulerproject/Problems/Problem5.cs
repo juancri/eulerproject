@@ -4,7 +4,8 @@ using System.Linq;
 
 namespace eulerproject
 {
-	[Problem (5, "Smallest multiple")]
+	[Slow]
+	[Problem (5, "Smallest multiple", 232792560)]
 	public class Problem5 : IProblem
 	{
 		public long Run ()
