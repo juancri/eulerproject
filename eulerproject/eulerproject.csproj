@@ -39,6 +39,7 @@
     <Compile Include="ProblemDefinition.cs" />
     <Compile Include="ProblemAttribute.cs" />
     <Compile Include="Problems\Problem2.cs" />
+    <Compile Include="Problems\Problem3.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
