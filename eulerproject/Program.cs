@@ -9,10 +9,11 @@ namespace eulerproject
 		{
 			var problems = ProblemReader.GetProblems ().ToList ();
 			foreach (var p in problems)
-				Console.WriteLine ("{0}: {1}", p.Number, p.Name);
+				Console.WriteLine ("{0:00000}: {1}", p.Number, p.Name);
 			Console.WriteLine ("Type problem number to execute:");
+			var number = Console.ReadLine ();
 			Console.WriteLine (problems
-				.First (p => p.Number == int.Parse (Console.ReadLine ()))
+				.First (p => p.Number == int.Parse (number))
 				.Problem.Run ());
 		}
 	}
