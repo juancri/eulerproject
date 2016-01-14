@@ -1,0 +1,23 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "eulerproject", "eulerproject\eulerproject.csproj", "{8DE87C94-1F4A-426A-9DF5-5983E1D0207D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "eulerproject.tests", "eulerproject.tests\eulerproject.tests.csproj", "{A0968984-6749-4F65-8F5A-729A0B5CC692}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8DE87C94-1F4A-426A-9DF5-5983E1D0207D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8DE87C94-1F4A-426A-9DF5-5983E1D0207D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8DE87C94-1F4A-426A-9DF5-5983E1D0207D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8DE87C94-1F4A-426A-9DF5-5983E1D0207D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A0968984-6749-4F65-8F5A-729A0B5CC692}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A0968984-6749-4F65-8F5A-729A0B5CC692}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A0968984-6749-4F65-8F5A-729A0B5CC692}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A0968984-6749-4F65-8F5A-729A0B5CC692}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
