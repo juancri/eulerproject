@@ -11,6 +11,12 @@ namespace eulerproject.tests
 		{
 			Assert.AreEqual (new Problem1 ().Run (), 234168);
 		}
+
+		[Test]
+		public void TestProblem2 ()
+		{
+			Assert.AreEqual (new Problem2 ().Run (), 4613732);
+		}
 	}
 }
 
