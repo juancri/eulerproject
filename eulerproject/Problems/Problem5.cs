@@ -10,19 +10,9 @@ namespace eulerproject
 		public long Run ()
 		{
 			var factors = SiplifyFactors (Enumerable.Range (1, 20));
-			return GetNaturalNumbers ()
+			return Naturals.Get ()
 				.Where (x => IsEvenlyDivisible (x, factors))
 				.First ();
-		}
-
-		private static IEnumerable <int> GetNaturalNumbers ()
-		{
-			int n = 1;
-			while (true)
-			{
-				yield return n;
-				n++;
-			}
 		}
 
 		private static bool IsEvenlyDivisible (int n, IEnumerable <int> factors)
