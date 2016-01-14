@@ -4,7 +4,7 @@ namespace eulerproject
 {
 	public interface IProblem
 	{
-		int Run ();
+		long Run ();
 	}
 }
 

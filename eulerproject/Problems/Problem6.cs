@@ -7,7 +7,7 @@ namespace eulerproject
 	[Problem (6, "Sum square difference")]
 	public class Problem6 : IProblem
 	{
-		public int Run ()
+		public long Run ()
 		{
 			var sumOfSquares = Enumerable.Range (1, 100)
 				.Select (x => Math.Pow (x, 2))

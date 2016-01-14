@@ -7,7 +7,7 @@ namespace eulerproject
 	[Problem (3, "Largest prime factor")]
 	public class Problem3 : IProblem
 	{
-		public int Run ()
+		public long Run ()
 		{
 			return GetPrimeFactors (600851475143).Last ();
 		}

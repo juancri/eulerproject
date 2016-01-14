@@ -7,7 +7,7 @@ namespace eulerproject
 	[Problem (2, "Even Fibonacci numbers")]
 	public class Problem2 : IProblem
 	{
-		public int Run ()
+		public long Run ()
 		{
 			return GetFibonacci ()
 				.TakeWhile (x => x <= 4000000)

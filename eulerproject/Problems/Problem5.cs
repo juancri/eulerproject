@@ -7,7 +7,7 @@ namespace eulerproject
 	[Problem (5, "Smallest multiple")]
 	public class Problem5 : IProblem
 	{
-		public int Run ()
+		public long Run ()
 		{
 			var factors = SiplifyFactors (Enumerable.Range (1, 20));
 			return GetNaturalNumbers ()

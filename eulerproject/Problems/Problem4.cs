@@ -7,7 +7,7 @@ namespace eulerproject
 	[Problem (4, "Largest palindrome product")]
 	public class Problem4 : IProblem
 	{
-		public int Run ()
+		public long Run ()
 		{
 			return GetProducts (100, 999)
 				.Where (x => IsPalindrome (x))
