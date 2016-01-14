@@ -47,23 +47,20 @@ namespace eulerproject
 
 			return
 				horizAdjacent.Concat (vertiAdjacent).Concat (diag1Adjacent).Concat (diag2Adjacent)
-				.Select (numbers => numbers.Aggregate ((a, b) => a * b))
 				.Max ();
 		}
 
-		private static IEnumerable <int[]> GetAdjacentNumbers (
+		private static IEnumerable <int> GetAdjacentNumbers (
 			int startX, int countX, Func<int, int, int> getX, 
 			int startY, int countY, Func<int, int, int> getY)
 		{
 			return
 				from x in Enumerable.Range (startX, countX)
 				from y in Enumerable.Range (startY, countY)
-				select new [] {
-					grid [getX (x, 0)] [getY (y, 0)],
-					grid [getX (x, 1)] [getY (y, 1)],
-					grid [getX (x, 2)] [getY (y, 2)],
-					grid [getX (x, 3)] [getY (y, 3)]
-				};
+				select grid [getX (x, 0)] [getY (y, 0)] *
+					grid [getX (x, 1)] [getY (y, 1)] *
+					grid [getX (x, 2)] [getY (y, 2)] *
+					grid [getX (x, 3)] [getY (y, 3)];
 		}
 	}
 }
