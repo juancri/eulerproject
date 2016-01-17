@@ -4,6 +4,7 @@ using System.Linq;
 
 namespace eulerproject
 {
+	[Slow]
 	[Problem (14, "Longest Collatz sequence", 837799)]
 	public class Problem14 : IProblem
 	{
