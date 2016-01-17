@@ -70,6 +70,7 @@
     <Compile Include="Util\Products.cs" />
     <Compile Include="Util\PythagoreanTriplet.cs" />
     <Compile Include="Problems\Problem18.cs" />
+    <Compile Include="Problems\Problem19.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
