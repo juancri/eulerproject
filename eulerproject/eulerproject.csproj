@@ -64,6 +64,11 @@
     <Compile Include="Problems\Problem16.cs" />
     <Compile Include="Problems\Problem17.cs" />
     <Compile Include="Util\NumberToWords.cs" />
+    <Compile Include="Util\TriangleNumbers.cs" />
+    <Compile Include="Util\Factors.cs" />
+    <Compile Include="Util\NumberIsPalindrome.cs" />
+    <Compile Include="Util\Products.cs" />
+    <Compile Include="Util\PythagoreanTriplet.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
