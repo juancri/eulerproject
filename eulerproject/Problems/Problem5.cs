@@ -4,30 +4,33 @@ using System.Linq;
 
 namespace eulerproject
 {
-	[Slow]
 	[Problem (5, "Smallest multiple", 232792560)]
 	public class Problem5 : IProblem
 	{
 		public long Run ()
 		{
-			var factors = SiplifyFactors (Enumerable.Range (1, 20));
-			return Naturals.Get ()
-				.Where (x => IsEvenlyDivisible (x, factors))
-				.First ();
-		}
+			var max = 20;
+			var factors = new List <int> ();
+			var products = new List <int> ();
+			foreach (var n in Enumerable.Range (1, max))
+			{
+				if (products.Contains (n))
+					continue;
 
-		private static bool IsEvenlyDivisible (int n, IEnumerable <int> factors)
-		{
-			return factors.All (x => n % x == 0);
-		}
+				var newFactor = products
+					.OrderByDescending (p => p)
+					.Where (p => n % p == 0)
+					.Select (p => n / p)
+					.FirstOrDefault ();
+				if (newFactor == 0)
+					newFactor = n;
+				
+				products.AddRange (products.Select (p => newFactor * p).ToList ());
+				products.Add (newFactor);
+				factors.Add (newFactor);
+			}
 
-		private static IList <int> SiplifyFactors (IEnumerable <int> factors)
-		{
-			var factors2 = factors.ToList ();
-			return factors2
-				.Where (x => !factors2.Any (x2 => x != x2 && x2 % x == 0))
-				.OrderByDescending (x => x)
-				.ToList ();
+			return factors.Aggregate ((a, b) => a * b);
 		}
 	}
 }
