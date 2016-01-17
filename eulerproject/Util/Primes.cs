@@ -13,7 +13,10 @@ namespace eulerproject
 			while (true)
 			{
 				current++;
-				if (temp.Any (x => current % x == 0))
+				var sqrt = Math.Sqrt (current);
+				if (temp
+					.TakeWhile (x => x <= sqrt)
+					.Any (x => current % x == 0))
 					continue;
 
 				temp.Add (current);
