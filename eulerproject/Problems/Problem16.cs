@@ -4,7 +4,7 @@ using System.Linq;
 
 namespace eulerproject
 {
-	[Problem (16, "Power digit sum", 1)]
+	[Problem (16, "Power digit sum", 1366)]
 	public class Problem16 : IProblem
 	{
 		public long Run ()
