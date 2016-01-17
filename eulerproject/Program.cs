@@ -34,8 +34,18 @@ namespace eulerproject
 			Console.WriteLine ("Type problem number to execute or ENTER to run all:");
 			var line = Console.ReadLine ();
 			if (line.Length == 0) {
+				var sw = new Stopwatch ();
+				sw.Start ();
 				foreach (var p in problems)
 					Run (p);
+				sw.Stop ();
+				Console.ForegroundColor = ConsoleColor.White;
+				Console.BackgroundColor = ConsoleColor.DarkYellow;
+				Console.WriteLine (
+					"Total time: {0}ms Average time: {1}ms",
+					sw.ElapsedMilliseconds,
+					sw.ElapsedMilliseconds / problems.Count);
+				Console.ResetColor ();
 			} else {
 				var number = int.Parse (line);
 				var problem = problems
