@@ -10,7 +10,26 @@ namespace eulerproject
 		{
 			var problems = ProblemReader.GetProblems ().ToList ();
 			foreach (var p in problems)
-				Console.WriteLine ("{0:00000}: {1}", p.Attribute.Number, p.Attribute.Name);
+			{
+				Console.BackgroundColor = ConsoleColor.Black;
+				Console.ForegroundColor = ConsoleColor.White;
+				Console.Write (" Problem {0:00000} ", 
+					p.Attribute.Number);
+
+				Console.BackgroundColor = ConsoleColor.Blue;
+				Console.Write (" {0}: ", 
+					p.Attribute.Name);
+
+				if (p.IsSlow)
+				{
+					Console.BackgroundColor = ConsoleColor.DarkGray;
+					Console.ForegroundColor = ConsoleColor.Red;
+					Console.Write (" [SLOW!] ");
+					Console.ForegroundColor = ConsoleColor.White;
+				}
+				Console.WriteLine ();
+			}
+			Console.ResetColor ();
 			Console.WriteLine ("Type problem number to execute or ENTER to run all:");
 			var line = Console.ReadLine ();
 			if (line.Length == 0) {
