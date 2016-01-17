@@ -52,6 +52,9 @@
     <Compile Include="Problems\Problem11.cs" />
     <Compile Include="Problems\Problem12.cs" />
     <Compile Include="SlowAttribute.cs" />
+    <Compile Include="Util\Digits.cs" />
+    <Compile Include="Util\PrimeFactors.cs" />
+    <Compile Include="Util\Fibonacci.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>

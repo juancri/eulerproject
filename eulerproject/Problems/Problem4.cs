@@ -24,7 +24,7 @@ namespace eulerproject
 
 		private static bool IsPalindrome (int n)
 		{
-			var digits = GetDigits (n).ToList ();
+			var digits = n.GetDigits ().ToList ();
 			int a = 0;
 			int b = digits.Count - 1;
 			while (a < b)
@@ -36,15 +36,6 @@ namespace eulerproject
 			}
 
 			return true;
-		}
-
-		private static IEnumerable <int> GetDigits (int n)
-		{
-			while (n > 0)
-			{
-				yield return n % 10;
-				n = n / 10;
-			}
 		}
 	}
 }

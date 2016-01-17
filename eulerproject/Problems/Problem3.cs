@@ -9,21 +9,7 @@ namespace eulerproject
 	{
 		public long Run ()
 		{
-			return GetPrimeFactors (600851475143).Last ();
-		}
-
-		private IEnumerable <int> GetPrimeFactors (long n)
-		{
-			foreach (var p in Primes.Get ())
-			{
-				if (n % p != 0)
-					continue;
-
-				yield return p;
-				n = n / p;
-				if (n == 1)
-					break;
-			}
+			return PrimeFactors.Get (600851475143).Last ();
 		}
 	}
 }
