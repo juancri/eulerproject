@@ -6,10 +6,10 @@ namespace eulerproject
 {
 	public static class Primes
 	{
-		public static IEnumerable <int> Get ()
+		public static IEnumerable <long> Get ()
 		{
-			var temp = new List <int> ();
-			var current = 1;
+			var temp = new List <long> ();
+			var current = 1L;
 			while (true)
 			{
 				current++;

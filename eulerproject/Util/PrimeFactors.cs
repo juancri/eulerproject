@@ -5,7 +5,7 @@ namespace eulerproject
 {
 	public static class PrimeFactors
 	{
-		public static IEnumerable <int> Get (long n)
+		public static IEnumerable <long> Get (long n)
 		{
 			foreach (var p in Primes.Get ())
 			{

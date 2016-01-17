@@ -12,7 +12,6 @@ namespace eulerproject
 		{
 			return Primes.Get ()
 				.TakeWhile (x => x < 2000000)
-				.Select (x => (long) x)
 				.Sum ();
 		}
 	}

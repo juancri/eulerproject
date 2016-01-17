@@ -26,9 +26,8 @@ namespace eulerproject
 						local.Add (y);
 				}
 
-				local.Reverse ();
 				for (var i = 0; i < local.Count; i++)
-					numbers.Add (local [i], i + distance + 1);
+					numbers.Add (local [local.Count - 1 - i], i + distance + 1);
 			}
 			return
 				numbers
