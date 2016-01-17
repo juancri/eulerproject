@@ -4,7 +4,7 @@ using System.Linq;
 
 namespace eulerproject
 {
-	[Problem (18, "Maximum path sum I", 1)]
+	[Problem (18, "Maximum path sum I", 1074)]
 	public class Problem18 : IProblem
 	{
 		private static readonly int [][] triangle = new int[][]
