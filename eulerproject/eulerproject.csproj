@@ -62,6 +62,8 @@
     <Compile Include="Util\LatticePaths.cs" />
     <Compile Include="Problems\Problem15.cs" />
     <Compile Include="Problems\Problem16.cs" />
+    <Compile Include="Problems\Problem17.cs" />
+    <Compile Include="Util\NumberToWords.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
