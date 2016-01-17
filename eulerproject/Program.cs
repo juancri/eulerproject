@@ -17,17 +17,18 @@ namespace eulerproject
 					p.Attribute.Number);
 
 				Console.BackgroundColor = ConsoleColor.Blue;
-				Console.Write (" {0}: ", 
+				Console.Write (" {0, -35} ", 
 					p.Attribute.Name);
 
 				if (p.IsSlow)
 				{
 					Console.BackgroundColor = ConsoleColor.DarkGray;
 					Console.ForegroundColor = ConsoleColor.Red;
-					Console.Write (" [SLOW!] ");
+					Console.WriteLine (" [SLOW!] ");
 					Console.ForegroundColor = ConsoleColor.White;
 				}
-				Console.WriteLine ();
+				else
+					Console.WriteLine ("         ");
 			}
 			Console.ResetColor ();
 			Console.WriteLine ("Type problem number to execute or ENTER to run all:");
@@ -51,7 +52,7 @@ namespace eulerproject
 				p.Attribute.Number);
 
 			Console.BackgroundColor = ConsoleColor.Blue;
-			Console.Write (" {0}: ", 
+			Console.Write (" {0, -35} ", 
 				p.Attribute.Name);
 
 			if (p.IsSlow)
@@ -61,6 +62,8 @@ namespace eulerproject
 				Console.Write (" [SLOW!] ");
 				Console.ForegroundColor = ConsoleColor.White;
 			}
+			else
+				Console.Write ("         ");
 
 			var sw = new Stopwatch();
 			sw.Start ();
