@@ -61,6 +61,7 @@
     <Compile Include="Util\CollatzSequence.cs" />
     <Compile Include="Util\LatticePaths.cs" />
     <Compile Include="Problems\Problem15.cs" />
+    <Compile Include="Problems\Problem16.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
