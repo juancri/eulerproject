@@ -9,8 +9,11 @@ namespace eulerproject
 		{
 			var a = 0;
 			var b = 0;
+			var sqrt = Math.Sqrt (n);
 			do {
 				a++;
+				if (a > sqrt)
+					yield break;
 				if (n % a == 0) {
 					yield return a;
 					b = n / a;
