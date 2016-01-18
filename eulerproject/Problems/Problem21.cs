@@ -21,7 +21,7 @@ namespace eulerproject
 				.ToList ();
 
 			var amicableNumbers =
-				(from n1 in numbersAndFactors
+				(from n1 in numbersAndFactors.AsParallel ()
 				 from n2 in numbersAndFactors
 				 where n1.number < n2.number
 				 where n1.sum == n2.number
