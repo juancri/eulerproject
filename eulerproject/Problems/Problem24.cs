@@ -27,10 +27,10 @@ namespace eulerproject
 			var localIndex = index / permutations;
 			yield return sorted [localIndex];
 			sorted.RemoveAt (localIndex);
-			var subpermutations = GetPermutation (
+
+			foreach (var sub in GetPermutation (
 				sorted.ToArray (),
-				index % permutations);
-			foreach (var sub in subpermutations)
+				index % permutations))
 				yield return sub;
 		}
 	}
