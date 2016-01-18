@@ -6,7 +6,7 @@ namespace eulerproject
 {
 	public static class BigFactorial
 	{
-		public static BigInteger Get (int n)
+		public static BigInteger GetBigFactorial (this int n)
 		{
 			return Enumerable.Range (1, n)
 				.Select (x => new BigInteger (x))

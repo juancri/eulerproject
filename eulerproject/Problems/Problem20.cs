@@ -8,7 +8,7 @@ namespace eulerproject
 	{
 		public long Run ()
 		{
-			return BigFactorial.Get (100)
+			return 100.GetBigFactorial ()
 				.ToString ()
 				.Select (c => int.Parse (c.ToString ()))
 				.Sum ();
