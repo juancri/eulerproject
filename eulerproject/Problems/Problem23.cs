@@ -11,11 +11,12 @@ namespace eulerproject
 		{
 			var max = 28123;
 			var abundantNumbers = Enumerable.Range (1, max)
+				.AsParallel ()
 				.Where (n => n < n.GetFactors ().Where (f => f != n).Sum ())
 				.ToList ();
 
 			var sums = 
-				(from a1 in abundantNumbers
+				(from a1 in abundantNumbers.AsParallel ()
 				from a2 in abundantNumbers
 				where a1 <= a2
 				let sum = a1 + a2
