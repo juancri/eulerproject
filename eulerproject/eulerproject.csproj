@@ -80,6 +80,7 @@
     <Compile Include="Util\Factorial.cs" />
     <Compile Include="Util\BigFibonacci.cs" />
     <Compile Include="Problems\Problem25.cs" />
+    <Compile Include="Problems\Problem26.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
