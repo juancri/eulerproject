@@ -81,6 +81,7 @@
     <Compile Include="Util\BigFibonacci.cs" />
     <Compile Include="Problems\Problem25.cs" />
     <Compile Include="Problems\Problem26.cs" />
+    <Compile Include="Problems\Problem28.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
