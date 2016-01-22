@@ -92,6 +92,7 @@
     <Compile Include="Util\Cyrcles.cs" />
     <Compile Include="Problems\Problem36.cs" />
     <Compile Include="Util\StringIsPalindrome.cs" />
+    <Compile Include="Problems\Problem37.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
