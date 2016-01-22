@@ -4,6 +4,7 @@ using System.Linq;
 
 namespace eulerproject
 {
+	[Slow]
 	[Problem (37, "Truncatable primes", 748317)]
 	public class Problem37 : IProblem
 	{
