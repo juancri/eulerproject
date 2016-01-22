@@ -27,7 +27,6 @@ namespace eulerproject
 				if (!CheckPrimeDigits (cache, digits, false))
 					continue;
 
-				Console.WriteLine ("found {0}", prime);
 				found.Add (prime);
 				if (found.Count == 11)
 					return found.Sum ();
