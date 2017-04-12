@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace eulerproject
+﻿namespace eulerproject
 {
 	[Problem (15, "Next Lattice paths", 137846528820)]
 	public class Problem15 : IProblem

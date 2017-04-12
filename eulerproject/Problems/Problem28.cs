@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
 
 namespace eulerproject
@@ -10,7 +9,7 @@ namespace eulerproject
 		public long Run ()
 		{
 			return GetDiagonals (1001)
-				.Sum ();	
+				.Sum ();
 		}
 
 		private static IEnumerable<int> GetDiagonals (int size)

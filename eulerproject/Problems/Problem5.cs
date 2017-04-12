@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
 
 namespace eulerproject
@@ -24,7 +23,7 @@ namespace eulerproject
 					.FirstOrDefault ();
 				if (newFactor == 0)
 					newFactor = n;
-				
+
 				products.AddRange (products.Select (p => newFactor * p).ToList ());
 				products.Add (newFactor);
 				factors.Add (newFactor);

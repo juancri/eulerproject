@@ -1,6 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
+﻿using System.Linq;
 
 namespace eulerproject
 {
@@ -9,7 +7,9 @@ namespace eulerproject
 	{
 		public long Run ()
 		{
-			return PrimeFactors.Get (600851475143).Last ();
+			return PrimeFactors
+				.Get (600851475143)
+				.Last ();
 		}
 	}
 }

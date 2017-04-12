@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
 
 namespace eulerproject
@@ -33,7 +32,7 @@ namespace eulerproject
 				return digits
 					.Select (d => (long)d)
 					.Aggregate ((a, b) => a * 10 + b);
-			
+
 			return 0;
 		}
 	}

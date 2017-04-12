@@ -1,12 +1,11 @@
-﻿using System;
-using System.Linq;
+﻿using System.Linq;
 
 namespace eulerproject
 {
 	[Problem (8, "Largest product in a series", 23514624000)]
 	public class Problem8 : IProblem
 	{
-		private static readonly string bigNumer = 
+		private static readonly string bigNumer =
 			"73167176531330624919225119674426574742355349194934" +
 			"96983520312774506326239578318016984801869478851843" +
 			"85861560789112949495459501737958331952853208805511" +
@@ -37,7 +36,7 @@ namespace eulerproject
 				.ToList ();
 			return
 				(from startIndex in Enumerable.Range (0, digits.Count + 2 - adjacentDigits)
-			     select digits
+				select digits
 					.Skip (startIndex)
 					.Take (adjacentDigits)
 					.Aggregate ((a, b) => a * b)).Max ();

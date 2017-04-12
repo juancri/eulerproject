@@ -20,10 +20,10 @@ namespace eulerproject
 				let ddenominator = (decimal)denominator
 				let result = dnumerator / ddenominator
 				where
-				    (numerator % 10 == denominator / 10 &&
-				    (numerator / 10) / (ddenominator % 10) == result) ||
-				    (numerator / 10 == denominator % 10 &&
-				    (dnumerator % 10) / (denominator / 10) == result)
+					(numerator % 10 == denominator / 10 &&
+					(numerator / 10) / (ddenominator % 10) == result) ||
+					(numerator / 10 == denominator % 10 &&
+					(dnumerator % 10) / (denominator / 10) == result)
 				select new Tuple <int, int> (numerator, denominator);
 
 			var total = fractions.Aggregate ((a, b) =>

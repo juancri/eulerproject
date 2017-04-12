@@ -1,5 +1,4 @@
-﻿using System;
-using System.Linq;
+﻿using System.Linq;
 
 namespace eulerproject
 {
@@ -15,7 +14,7 @@ namespace eulerproject
 				.Where (n => n < n.GetFactors ().Where (f => f != n).Sum ())
 				.ToList ();
 
-			var sums = 
+			var sums =
 				(from a1 in abundantNumbers.AsParallel ()
 				from a2 in abundantNumbers
 				where a1 <= a2
