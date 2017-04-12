@@ -33,5 +33,32 @@ namespace eulerproject
 				}
 			}
 		}
+
+		public static bool[] GetArray(long maximum)
+		{
+			var sqrt = Math.Sqrt(maximum);
+			var excluded = new bool[maximum];
+			var current = 1;
+			while (true)
+			{
+				current++;
+				if (current > maximum)
+					break;
+
+				if (current > sqrt)
+					continue;
+
+				var temp = (long)Math.Pow(current, 2);
+				while (true)
+				{
+					if (temp > maximum)
+						break;
+					excluded[temp - 1] = true;
+					temp += current;
+				}
+			}
+
+			return excluded;
+		}
 	}
 }
