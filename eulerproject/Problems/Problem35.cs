@@ -2,20 +2,18 @@
 
 namespace eulerproject
 {
-	[Slow]
 	[Problem (35, "Circular primes", 55)]
 	public class Problem35 : IProblem
 	{
 		public long Run ()
 		{
-			var primes = Primes.Get ()
-				.TakeWhile (p => p < 1000000)
-				.Select (p => (int) p)
-				.ToList ();
+			var maximum = 1000000 - 1;
+			var primes = EratosthenesPrimes.GetArray (maximum);
 
-			return primes
+			return Enumerable.Range (2, maximum - 1)
 				.AsParallel ()
-				.Where (p => p.GetCyrcles ().All (c => primes.Contains (c)))
+				.Where (n => !primes [n - 1])
+				.Where (p => p.GetCyrcles ().All (c => !primes [c - 1]))
 				.Count ();
 		}
 	}
