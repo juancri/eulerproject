@@ -3,22 +3,22 @@ using System.Linq;
 
 namespace eulerproject
 {
-	[Slow]
 	[Problem (14, "Longest Collatz sequence", 837799)]
 	public class Problem14 : IProblem
 	{
 		public long Run ()
 		{
-			var numbers = new Dictionary <long, int> ();
+			var numbers = new int[1000000];
+			var maxNumber = 1;
 			foreach (var x in Enumerable.Range (1, 999999))
 			{
 				var local = new List <long> ();
 				var distance = 0;
 				foreach (var y in CollatzSequence.Get (x))
 				{
-					if (numbers.ContainsKey (y))
+					if (y < 1000000 && numbers [y - 1] > 0)
 					{
-						distance = numbers [y];
+						distance = numbers [y - 1];
 						break;
 					}
 					else
@@ -26,13 +26,14 @@ namespace eulerproject
 				}
 
 				for (var i = 0; i < local.Count; i++)
-					numbers.Add (local [local.Count - 1 - i], i + distance + 1);
+					if (local[local.Count - 1 - i] < 1000000)
+						numbers[local[local.Count - 1 - i] - 1] = i + distance + 1;
+
+				if (numbers [maxNumber - 1] < distance + local.Count)
+					maxNumber = (int) local[0];
 			}
-			return
-				numbers
-					.OrderByDescending (n => n.Value)
-					.First ()
-					.Key;
+
+			return maxNumber;
 		}
 	}
 }
